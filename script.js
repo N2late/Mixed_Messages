@@ -36,7 +36,7 @@ const mixMessageGenerator = () => {
         mixMessageGenerator()
     }
     mixMessage.push(x);
-    console.log(x);
+    alert(x);
 }
 
-mixMessageGenerator();
+// mixMessageGenerator();
