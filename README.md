@@ -1,6 +1,7 @@
 # Mixed Messages
 
 ## Scope
+
 Portfolio Project for the CodeCademy Full-Stack Engineer Path.
 
 ## Overview
@@ -16,3 +17,7 @@ Poetic Portuguese lines.
 + Use Git version control
 + Use command line
 + Develop locally on your computer
+
+## URL
+
+https://n2late.github.io/Mixed_Messages/
