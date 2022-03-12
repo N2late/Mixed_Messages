@@ -42,5 +42,3 @@ const mixMessageGenerator = () => {
     mixMessage.push(x);
     alert(x);
 }
-
-mixMessageGenerator();
