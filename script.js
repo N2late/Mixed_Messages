@@ -1,3 +1,4 @@
+// array of poetic lines
 const poeticLine1 = [
                         "Não sou nada.",
                         "Porque é tudo para sempre, mesmo a efémera morte",
@@ -12,31 +13,34 @@ const poeticLine1 = [
                         "Ah! Poder ser tu, sendo eu!",
                         "Passei toda a noite, sem dormir, vendo, sem espaço, a figura dela",
                     ]
-
+// store generated messages
 let mixMessage = [];
 
-let line1 = 0;
-let line2 = 0;
-let line3 = 0;
+// random number generator
+let randomize = arr => {
+    let i = Math.floor(Math.random() * arr.length)
+    return i;
+}
 
-let max = poeticLine1.length;
-
+// function to generator and mix the poetic lines
 const mixMessageGenerator = () => {
-    line1 = Math.floor(Math.random() * max);
-    line2 = Math.floor(Math.random() * max);
-    while (line2 == line1) {
-        line2 = Math.floor(Math.random() * max);
+    let line1 = randomize(poeticLine1)
+    let line2 = randomize(poeticLine1);
+    //to avoid the same sentence twice
+    while (line2 == line1) {                 
+        line2 = randomize(poeticLine1);
     }
-    line3 = Math.floor(Math.random() * max);
+    let line3 = randomize(poeticLine1);
     while (line3 == line2 || line3 == line1) {
-        line3 = Math.floor(Math.random() * max);
+        line3 = randomize(poeticLine1);
     }
     let x = poeticLine1[line1] + "\n" + poeticLine1[line2] + "\n" + poeticLine1[line3];
-    while (mixMessage.includes(x)) {
+    // to assure to always generate a new message
+    while (mixMessage.includes(x)) {      //would need a function to calculate the finite combinations
         mixMessageGenerator()
     }
     mixMessage.push(x);
     alert(x);
 }
 
-// mixMessageGenerator();
+mixMessageGenerator();
