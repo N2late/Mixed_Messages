@@ -1,4 +1,4 @@
-# Mixed_Messages
+# Mixed Messages
 
 ## Scope
 Portfolio Project for the CodeCademy Full-Stack Engineer Path.
