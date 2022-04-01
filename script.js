@@ -5,8 +5,7 @@ const poeticLine1 = [
                         "Eu quero levar-te comigo",
                         "E tudo isso, que é tanto, é pouco para o que eu quero",
                         "Pois tudo o que é belo é sobejo", 
-                        "Porque ficou oceânico",
-                        "o escasso momento de nós?", 
+                        "Porque ficou oceânico o escasso momento de nós?",
                         "Amar é pensar.",
                         "Promete-me que ficarás",
                         "É talvez o último dia da minha vida.",
@@ -34,11 +33,11 @@ const mixMessageGenerator = () => {
     while (line3 == line2 || line3 == line1) {
         line3 = randomize(poeticLine1);
     }
-    let x = poeticLine1[line1] + "\n" + poeticLine1[line2] + "\n" + poeticLine1[line3];
+    let x = poeticLine1[line1] + "<br>" + poeticLine1[line2] + "<br>" + poeticLine1[line3];
     // to assure to always generate a new message
     while (mixMessage.includes(x)) {      //would need a function to calculate the finite combinations
         mixMessageGenerator()
     }
     mixMessage.push(x);
-    alert(x);
+    document.getElementById('text').innerHTML = x;
 }
